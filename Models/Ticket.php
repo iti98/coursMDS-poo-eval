@@ -8,6 +8,8 @@ class Tickets extends Payable
     private string $reference;
     private int $price;
 
+    private int $taxPerMil = 2500;
+
     public function __construct(string $ref, int $price) {
         $this->reference = $ref;
         $this->price = $price;
