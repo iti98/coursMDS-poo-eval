@@ -48,6 +48,18 @@ class ShoppingCart
         return $total;
     }
 
+    public function toString()
+    {
+        $string = 'ShoppingCart: ' . $this->id . '. <br>';
+        $string .= 'You have ' . $this->itemCount() . ' items in your cart ';
+        $string .= 'for a total price of ' . $this->totalPrice()/100 .'$ <br>';
+        $string .= 'Items: <br>';
+        foreach ($this->itemList as $item) {
+            $string .= $item->getName() . ' ' . $item->getWeight() . 'g: ' . $item->getPrice()/100 . '$<br>';
+        }
+        echo $string;
+    }
+
     private function checkWeight(Item $item, int $maxWeight = 1000)
     {
         $isGood = ($this->totalWeight + $item->getWeight()) <= $maxWeight;

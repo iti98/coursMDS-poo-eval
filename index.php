@@ -22,13 +22,13 @@ require_once('autoload.php');
 
 // printf('Prix total:'. $shopping->totalPrice()/100 . '$');
 
-// $shopping = new ShoppingCart();
+$shopping = new ShoppingCart();
 
-// $item = new Item("corn flakes", 500, 250);
-// $shopping->addItem($item);
-// $shopping->addItem(new Item("Bueno", 600, 250));
-// $shopping->addItem(new Item("Pingui", 250, 250));
-// $shopping->addItem(new Item("Country", 250, 250));
+$item = new Item("corn flakes", 500, 250);
+$shopping->addItem($item);
+$shopping->addItem(new Item("Bueno", 600, 250));
+$shopping->addItem(new Item("Pingui", 250, 250));
+$shopping->addItem(new Item("Country", 250, 250));
 // // Work
 // $shopping->addItem(new Item("Delice", 250, 250));
 // // Don't add (so it work)
@@ -44,4 +44,5 @@ require_once('autoload.php');
 // Exo 2.3 fait
 
 
-
+$shopping->toString();
+// Exo 2.4 fait
