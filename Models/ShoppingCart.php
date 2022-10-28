@@ -18,7 +18,8 @@ class ShoppingCart
 
     public function addItem(Item $item)
     {
-        if ($this->checkWeight($item)) {
+        // Updating from 1kg to 10kg
+        if ($this->checkWeight($item, 10000)) {
             $this->itemList[] = $item;
         }
         return $this->itemList;
