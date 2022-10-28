@@ -5,9 +5,9 @@ namespace Models;
 class Item
 {
 
-    private $name;
-    private $price;
-    private $weight;
+    private string $name;
+    private int $price; 
+    private int $weight;
 
     public function __construct($name, $price, $weight)
     {
@@ -23,7 +23,7 @@ class Item
     }
 
 
-    
+
 
     /**
      * Get the value of name
