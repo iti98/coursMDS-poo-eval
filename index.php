@@ -1,5 +1,6 @@
 <?php
 
+use Models\FreshItem;
 use Models\ShoppingCart;
 use Models\Item;
 
@@ -44,5 +45,8 @@ $shopping->addItem(new Item('Country', 250, 250));
 // Exo 2.3 fait
 
 
-$shopping->toString();
 // Exo 2.4 fait
+
+
+$shopping->addItem(new FreshItem('Salmon', 1690, 1000, '2022-12-31'));
+$shopping->toString();

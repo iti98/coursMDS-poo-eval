@@ -55,10 +55,10 @@ class ShoppingCart
         $string .= 'You have ' . $this->itemCount() . ' items in your cart ';
         $string .= 'for a total price of ' . $this->totalPrice() / 100 . '$ <br>';
         $string .= 'Items: <br>';
-        foreach ($this->itemList as $item) {
-            $string .= $item->getName() . ' ' . $item->getWeight() . 'g: ' . $item->getPrice() / 100 . '$<br>';
-        }
         echo $string;
+        foreach ($this->itemList as $item) {
+            $item->displayInfo();
+        }
     }
 
     private function checkWeight(Item $item, int $maxWeight = 1000)

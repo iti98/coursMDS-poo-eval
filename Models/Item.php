@@ -19,7 +19,7 @@ class Item
     // Affiche le prix en $ car je n'ai pas le cygle euros sur mon clavier
     public function displayInfo()
     {
-        print_r($this->name . ':' . $this->price / 100 . '$');
+        echo $this->getName() . ' ' . $this->getWeight() . 'g: ' . $this->getPrice() / 100 . '$<br>';
     }
 
 
