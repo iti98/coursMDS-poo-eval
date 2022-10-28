@@ -52,10 +52,10 @@ class ShoppingCart
     {
         $string = 'ShoppingCart: ' . $this->id . '. <br>';
         $string .= 'You have ' . $this->itemCount() . ' items in your cart ';
-        $string .= 'for a total price of ' . $this->totalPrice()/100 .'$ <br>';
+        $string .= 'for a total price of ' . $this->totalPrice() / 100 . '$ <br>';
         $string .= 'Items: <br>';
         foreach ($this->itemList as $item) {
-            $string .= $item->getName() . ' ' . $item->getWeight() . 'g: ' . $item->getPrice()/100 . '$<br>';
+            $string .= $item->getName() . ' ' . $item->getWeight() . 'g: ' . $item->getPrice() / 100 . '$<br>';
         }
         echo $string;
     }

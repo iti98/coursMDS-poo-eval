@@ -6,7 +6,7 @@ class Item
 {
 
     private string $name;
-    private int $price; 
+    private int $price;
     private int $weight;
 
     public function __construct($name, $price, $weight)
