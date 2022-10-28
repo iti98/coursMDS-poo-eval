@@ -39,9 +39,9 @@ require_once('autoload.php');
 // $shopping->addItem(new Item("Bueno white", 250, 250));
 // // Add (so it work)
 // var_dump($shopping);
-// // Fin exo 2
+// // Fin exo 2.2
 
-
+// Exo 2.3 fait
 
 
 
