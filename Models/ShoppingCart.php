@@ -18,7 +18,8 @@ class ShoppingCart
 
     public function addItem(Item $item)
     {
-        if ($this->checkWeight($item)) {
+        // Updating from 1kg to 10kg
+        if ($this->checkWeight($item, 10000)) {
             $this->itemList[] = $item;
         }
         return $this->itemList;
@@ -52,12 +53,12 @@ class ShoppingCart
     {
         $string = 'ShoppingCart: ' . $this->id . '. <br>';
         $string .= 'You have ' . $this->itemCount() . ' items in your cart ';
-        $string .= 'for a total price of ' . $this->totalPrice()/100 .'$ <br>';
+        $string .= 'for a total price of ' . $this->totalPrice() / 100 . '$ <br>';
         $string .= 'Items: <br>';
-        foreach ($this->itemList as $item) {
-            $string .= $item->getName() . ' ' . $item->getWeight() . 'g: ' . $item->getPrice()/100 . '$<br>';
-        }
         echo $string;
+        foreach ($this->itemList as $item) {
+            $item->displayInfo();
+        }
     }
 
     private function checkWeight(Item $item, int $maxWeight = 1000)
